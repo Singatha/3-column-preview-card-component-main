@@ -13,7 +13,7 @@
     --ff-big-shoulder-display: "Big Shoulders Display";
 }
 
-html, body, .container {
+html, body, .preview-card {
     height: 100%;
 }
 
@@ -23,60 +23,60 @@ body {
     justify-content: center;
 }
 
-.container {
+.preview-card {
     display: flex;
     flex-direction: column;
     max-width: 350px;
     width: 100%;
 }
 
-.orange, .dark-cyan, .very-dark-cyan {
+.preview-card__body {
     padding: 50px;
 }
 
-.orange {
+.preview-card__body--orange {
     background-color: var(--bright-orange);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.dark-cyan {
+.preview-card__body--dark-cyan {
     background-color: var(--dark-cyan);
 }
 
-.very-dark-cyan {
+.preview-card__body--very-dark-cyan {
     background-color: var(--very-dark-cyan);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-h1 {
+.preview-card__title {
     color: var(--very-light-gray);
     font-family: var(--ff-lexenda-deca);
     font-weight: var(--fw-700);
     text-transform: uppercase;
 }
 
-.text {
+.preview-card__text {
     color: var(--transparent-white);
     font-size: var(--fs);
     font-family: var(--ff-lexenda-deca);
     font-weight: var(--fw-400);
 }
 
-.orange button {
+.preview-card__btn--orange {
     color: var(--bright-orange);
 }
 
-.dark-cyan button {
+.preview-card__btn--dark-cyan {
     color: var(--dark-cyan);
 }
 
-.very-dark-cyan button {
+.preview-card__btn--very-dark-cyan {
     color: var(--very-dark-cyan);
 }
 
-button {
+.preview-card__btn {
     border-radius: 60px;
     border: none;
     font-family: var(--ff-lexenda-deca);
@@ -85,32 +85,32 @@ button {
     width: 150px;
 }
 
-button:hover {
+.preview-card__btn:hover {
     border: 2px solid var(--transparent-white);
     background-color: unset;
     color: var(--transparent-white);
 }
 
-@media screen and (min-width: 1000px){
-    .container {
+@media screen and (min-width: 1000px) {
+    .preview-card {
         flex-direction: row;
         justify-content: center;
         height: unset;
     }
 
-    .text {
-        margin: 15px 0 50px;
-    }
-
-    .orange {
+    .preview-card__body--orange {
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         border-top-right-radius: 0;
     }
 
-    .very-dark-cyan {
+    .preview-card__body--very-dark-cyan {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 0;
+    }
+
+    .preview-card__text {
+        margin: 15px 0 50px;
     }
 }
